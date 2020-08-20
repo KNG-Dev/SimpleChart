@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Subscription Controller-->
+        <scene sceneID="fuh-eg-m6h">
+            <objects>
+                <tableViewController storyboardIdentifier="AddSubscriptionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y7J-9C-uAD" customClass="AddSubscriptionController" customModule="SimpleChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="KSR-dD-g8J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Item" id="dui-Z2-Ft9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubscriptionCell" rowHeight="44" id="D0T-Hz-hbI">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D0T-Hz-hbI" id="c0m-2D-hUv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Subscription" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-Jp-Lng">
+                                                    <rect key="frame" x="12" y="0.0" width="390" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dPK-Jp-Lng" secondAttribute="bottom" id="bPr-2m-EO5"/>
+                                                <constraint firstAttribute="trailing" secondItem="dPK-Jp-Lng" secondAttribute="trailing" constant="12" id="euI-zK-phw"/>
+                                                <constraint firstItem="dPK-Jp-Lng" firstAttribute="leading" secondItem="c0m-2D-hUv" secondAttribute="leading" constant="12" id="hIG-OK-vs9"/>
+                                                <constraint firstItem="dPK-Jp-Lng" firstAttribute="top" secondItem="c0m-2D-hUv" secondAttribute="top" id="icO-Xi-IDZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Price" id="NXO-aL-Fd5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriceCell" rowHeight="44" id="lC9-rn-KrJ">
+                                        <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lC9-rn-KrJ" id="qi0-ij-ROr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgl-El-Noj">
+                                                    <rect key="frame" x="12" y="0.0" width="390" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Tgl-El-Noj" secondAttribute="bottom" id="6hw-JE-sOf"/>
+                                                <constraint firstItem="Tgl-El-Noj" firstAttribute="top" secondItem="qi0-ij-ROr" secondAttribute="top" id="Z4K-Vm-cuL"/>
+                                                <constraint firstItem="Tgl-El-Noj" firstAttribute="leading" secondItem="qi0-ij-ROr" secondAttribute="leading" constant="12" id="euw-0C-Dbq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tgl-El-Noj" secondAttribute="trailing" constant="12" id="qoF-iY-UBh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="y7J-9C-uAD" id="biK-jc-SCM"/>
+                            <outlet property="delegate" destination="y7J-9C-uAD" id="uMs-w8-eBM"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="subscriptionPriceTextField" destination="Tgl-El-Noj" id="kbj-bx-jGl"/>
+                        <outlet property="subscriptionTextField" destination="dPK-Jp-Lng" id="anK-fu-hnL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkn-uz-TZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="204"/>
+        </scene>
+    </scenes>
+</document>
