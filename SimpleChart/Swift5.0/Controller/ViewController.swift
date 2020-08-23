@@ -22,7 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let chartViewHeader = ChartView()
     
     var subscriptions = [Subscription(name: "Netflix", price: 12.99, image: "NetflixLogo"), Subscription(name: "Spotify", price: 9.99, image: "SpotifyLogo"), Subscription(name: "Disney Plus", price: 6.99, image: "DisneyPlusLogo")]
-    lazy var total = subscriptions.map({$0.price}).reduce(0, +)
+    
+    lazy var totalPrices = subscriptions.map({$0.price}).reduce(0, +)
     
     //MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -33,20 +34,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setupSearchBar()
         setupTableView()
     }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         chartViewHeader.chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)
-        total = subscriptions.map({$0.price}).reduce(0, +)
-        subscriptionHeader.totalCostLabel.text = "$\(total.rounded()) / Month"
+        totalPrices = subscriptions.map({$0.price}).reduce(0, +)
+        subscriptionHeader.totalCostLabel.text = "$\(totalPrices.rounded()) / Month"
     }
     
     //MARK: - Sets up Navigation Bar
     fileprivate func setupNavBar() {
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.isTranslucent = true
+        let navBarAppeareance = UINavigationBarAppearance()
+        navBarAppeareance.backgroundColor = .white
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppeareance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppeareance
         navigationController?.navigationBar.tintColor = .systemBlue
-       
+        navigationController?.view.backgroundColor = .white
+        
         let navigationTitleView = NavigationTitleView()
         navigationTitleView.frame.size = CGSize(width: 120, height: 40)
         navigationItem.titleView = navigationTitleView
@@ -71,6 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.addSubview(tableView)
         tableView.fillSuperview()
+        tableView.contentInset = UIEdgeInsets(top: 18, left: 0, bottom: 0, right: 0)
         tableView.tableFooterView = UIView()
     }
     
@@ -122,6 +128,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    
     //Remove Cells
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -134,9 +142,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //MARK: - AddSubscription Delegates
 extension ViewController: AddSubscriptionControllerDelegate {
     func addSubscription(subscription: Subscription) {
+        
         subscriptions.append(subscription)
         let indexPath = IndexPath(row: subscriptions.count - 1, section: 1)
     
+//        tableView.reloadData()
+        
+        //FIXME: - This is causing the Warning once Only, UITableview was told to layout its cells without being in the viewhierarchy
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()

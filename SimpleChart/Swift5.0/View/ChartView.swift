@@ -25,7 +25,9 @@ class ChartView: UIView, ChartViewDelegate {
     func setupChartView() {
         chartView.delegate = self
         addSubview(chartView)
-        chartView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 10, paddingRight: 0, width: 0, height: 0)
+        backgroundColor = UIColor(named: "Background")
+        
+        chartView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         self.setDataCount(4, range: 100)
         
@@ -37,11 +39,12 @@ class ChartView: UIView, ChartViewDelegate {
         legend.xEntrySpace = 20
         legend.textColor = .systemBlue
         
-        
         chartView.drawEntryLabelsEnabled = false
         chartView.rotationEnabled = false
         chartView.usePercentValuesEnabled = true
         chartView.transparentCircleColor = .clear
+        
+        chartView.holeColor = .clear
         
         //Animate chart
         chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)

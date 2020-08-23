@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34291B3324F1DA6000FF9BF2 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */; };
+		34291B3824F2E00F00FF9BF2 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */; };
+		34291B3A24F2E54200FF9BF2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34291B3924F2E54200FF9BF2 /* MenuView.swift */; };
 		34631F3524EDC69D00EC0620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F3424EDC69D00EC0620 /* AppDelegate.swift */; };
 		34631F3724EDC69D00EC0620 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F3624EDC69D00EC0620 /* SceneDelegate.swift */; };
 		34631F3B24EDC6A200EC0620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34631F3A24EDC6A200EC0620 /* Assets.xcassets */; };
@@ -18,13 +21,17 @@
 		34631F5024EDFCB900EC0620 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 34631F4F24EDFCB900EC0620 /* Charts */; };
 		34631F5324EE1A4400EC0620 /* SubscriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5224EE1A4400EC0620 /* SubscriptionHeader.swift */; };
 		34631F5524EE1F2100EC0620 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5424EE1F2100EC0620 /* SubscriptionCell.swift */; };
-		34631F5724EE206400EC0620 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5624EE206400EC0620 /* Subscription.swift */; };
 		34631F5924EED0D500EC0620 /* AddSubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5824EED0D400EC0620 /* AddSubscriptionController.swift */; };
 		34631F5D24EED72200EC0620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34631F5C24EED72200EC0620 /* Main.storyboard */; };
 		34631F6424EEF08100EC0620 /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F6324EEF08100EC0620 /* NavigationTitleView.swift */; };
+		348D877824F0749D008F4473 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D877724F0749D008F4473 /* BudgetView.swift */; };
+		348D879524F18B81008F4473 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5624EE206400EC0620 /* Subscription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		34291B3924F2E54200FF9BF2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		34631F3124EDC69D00EC0620 /* SimpleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34631F3424EDC69D00EC0620 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34631F3624EDC69D00EC0620 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +48,8 @@
 		34631F5824EED0D400EC0620 /* AddSubscriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriptionController.swift; sourceTree = "<group>"; };
 		34631F5C24EED72200EC0620 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		34631F6324EEF08100EC0620 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
+		348D877724F0749D008F4473 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleChart copy-Info.plist"; path = "/Users/kennyho/Development/SimpleChart/SimpleChart copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +64,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34291B3424F1E44800FF9BF2 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				348D877724F0749D008F4473 /* BudgetView.swift */,
+				34291B3924F2E54200FF9BF2 /* MenuView.swift */,
+				34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */,
+				34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		34291B3524F1E47100FF9BF2 /* Swift5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				34631F6024EEEB8500EC0620 /* Controller */,
+				34631F6224EEEB9A00EC0620 /* Model */,
+				34631F6124EEEB9000EC0620 /* View */,
+				34631F4A24EDF95E00EC0620 /* Extensions.swift */,
+			);
+			path = Swift5.0;
+			sourceTree = "<group>";
+		};
 		34631F2824EDC69D00EC0620 = {
 			isa = PBXGroup;
 			children = (
 				34631F3324EDC69D00EC0620 /* SimpleChart */,
 				34631F3224EDC69D00EC0620 /* Products */,
+				348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,10 +108,8 @@
 			children = (
 				34631F3424EDC69D00EC0620 /* AppDelegate.swift */,
 				34631F3624EDC69D00EC0620 /* SceneDelegate.swift */,
-				34631F4A24EDF95E00EC0620 /* Extensions.swift */,
-				34631F6024EEEB8500EC0620 /* Controller */,
-				34631F6224EEEB9A00EC0620 /* Model */,
-				34631F6124EEEB9000EC0620 /* View */,
+				34291B3424F1E44800FF9BF2 /* SwiftUI */,
+				34291B3524F1E47100FF9BF2 /* Swift5.0 */,
 				34631F3A24EDC6A200EC0620 /* Assets.xcassets */,
 				34631F5C24EED72200EC0620 /* Main.storyboard */,
 				34631F3F24EDC6A200EC0620 /* LaunchScreen.storyboard */,
@@ -207,12 +237,16 @@
 				34631F3524EDC69D00EC0620 /* AppDelegate.swift in Sources */,
 				34631F3724EDC69D00EC0620 /* SceneDelegate.swift in Sources */,
 				34631F5924EED0D500EC0620 /* AddSubscriptionController.swift in Sources */,
+				34291B3324F1DA6000FF9BF2 /* SubscriptionViewModel.swift in Sources */,
+				34291B3824F2E00F00FF9BF2 /* SubscriptionView.swift in Sources */,
+				348D879524F18B81008F4473 /* Subscription.swift in Sources */,
+				34291B3A24F2E54200FF9BF2 /* MenuView.swift in Sources */,
 				34631F4924EDF27C00EC0620 /* ViewController.swift in Sources */,
 				34631F5324EE1A4400EC0620 /* SubscriptionHeader.swift in Sources */,
-				34631F5724EE206400EC0620 /* Subscription.swift in Sources */,
 				34631F6424EEF08100EC0620 /* NavigationTitleView.swift in Sources */,
 				34631F5524EE1F2100EC0620 /* SubscriptionCell.swift in Sources */,
 				34631F4D24EDFC7300EC0620 /* ChartView.swift in Sources */,
+				348D877824F0749D008F4473 /* BudgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
