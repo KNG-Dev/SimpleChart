@@ -14,10 +14,10 @@ struct MenuView: View {
     }
     
     var body: some View {
-        List(0..<10) {_ in
+        List(menu) {item in
             HStack(spacing: 12) {
-                Image(systemName: "person.circle")
-                Text("Actvity")
+                Image(systemName: item.image)
+                Text(item.title)
             }
                 
             
@@ -25,6 +25,23 @@ struct MenuView: View {
         }
     }
 }
+
+struct Menu: Identifiable {
+    var id = UUID()
+    let title: String
+    let image: String
+}
+
+let menu = [
+    Menu(title: "Activity", image: "person.circle"),
+    Menu(title: "Expenses", image: "calendar"),
+    Menu(title: "Goals", image: "person.circle"),
+    Menu(title: "Certificate of Deposit", image: "dollarsign.circle"),
+    Menu(title: "Support", image: "message"),
+    Menu(title: "Personal Info", image: "person.circle"),
+    Menu(title: "Account Details", image: "house"),
+    Menu(title: "App Settings", image: "gear"),
+]
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
