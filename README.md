@@ -1,4 +1,4 @@
 # SimpleChart
 
 
-![](AppleWalletAnimation.gif)
+![](SimpleFinance.gif)
