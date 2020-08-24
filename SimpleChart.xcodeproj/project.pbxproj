@@ -26,6 +26,7 @@
 		34631F6424EEF08100EC0620 /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F6324EEF08100EC0620 /* NavigationTitleView.swift */; };
 		348D877824F0749D008F4473 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D877724F0749D008F4473 /* BudgetView.swift */; };
 		348D879524F18B81008F4473 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5624EE206400EC0620 /* Subscription.swift */; };
+		34962DCB24F36256008C4558 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34962DCA24F36256008C4558 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		34631F6324EEF08100EC0620 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		348D877724F0749D008F4473 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleChart copy-Info.plist"; path = "/Users/kennyho/Development/SimpleChart/SimpleChart copy-Info.plist"; sourceTree = "<absolute>"; };
+		34962DCA24F36256008C4558 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				348D877724F0749D008F4473 /* BudgetView.swift */,
 				34291B3924F2E54200FF9BF2 /* MenuView.swift */,
+				34962DCA24F36256008C4558 /* Menu.swift */,
 				34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */,
 				34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */,
 			);
@@ -242,6 +245,7 @@
 				348D879524F18B81008F4473 /* Subscription.swift in Sources */,
 				34291B3A24F2E54200FF9BF2 /* MenuView.swift in Sources */,
 				34631F4924EDF27C00EC0620 /* ViewController.swift in Sources */,
+				34962DCB24F36256008C4558 /* Menu.swift in Sources */,
 				34631F5324EE1A4400EC0620 /* SubscriptionHeader.swift in Sources */,
 				34631F6424EEF08100EC0620 /* NavigationTitleView.swift in Sources */,
 				34631F5524EE1F2100EC0620 /* SubscriptionCell.swift in Sources */,

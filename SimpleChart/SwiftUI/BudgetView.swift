@@ -11,12 +11,10 @@ import SwiftUI
 let screen = UIScreen.main.bounds
 
 struct BudgetView: View {
-    var store = SubscriptionViewModel()
+    var viewModel = SubscriptionViewModel()
     @State var showPresent = false
     @State var showMenu = false
-    @State var dark = false
     
-    //Custom Initializers
     init() {
         setupNavBar()
         UITableView.appearance().backgroundColor = UIColor(named: "Background")
@@ -43,7 +41,7 @@ struct BudgetView: View {
                     .background(Color("Background"))
                     .listRowInsets(EdgeInsets())
                     
-                    SubscriptionsSection(store: self.store)
+                    SubscriptionsSection(viewModel: viewModel)
                         .background(Color("Background"))
                 }
                     
@@ -57,7 +55,10 @@ struct BudgetView: View {
                         
                     }, trailing:
                     
-                    Button(action: {self.addUpdate()}) {
+                    Button(action: {
+                        self.viewModel.append()
+                        
+                    }) {
                         Image(systemName: "plus")
                             .resizable()
                             .frame(width: 14, height: 14)
@@ -77,14 +78,8 @@ struct BudgetView: View {
                 .overlay(Rectangle().stroke(Color.primary.opacity(0.2), lineWidth: 2).shadow(radius: 3).edgesIgnoringSafeArea(.all))
                 .offset(x: self.showMenu ? 0 : -screen.width / 1.5)
                 .animation(.easeOut(duration: 0.3))
-            
+                
         }
-    }
-    
-    func addUpdate() {
-        print("Adding item")
-        let newSubscription = Item(title: "Simple", price: 9.99, image: "SimpleLogo")
-        store.subscriptions.append(newSubscription)
     }
     
     fileprivate func setupNavBar() {
@@ -104,7 +99,7 @@ struct BudgetView_Previews: PreviewProvider {
 }
 
 struct SubscriptionsSection: View {
-    @State var store: SubscriptionViewModel
+    @ObservedObject var viewModel = SubscriptionViewModel()
     
     var body: some View {
         Section(header:
@@ -118,7 +113,7 @@ struct SubscriptionsSection: View {
                     Spacer()
                     
                     //reduce function takes sum of all prices in array
-                    Text("$\(store.subscriptions.map({$0.price}).reduce(0, +), specifier: "%.2f") / Month")
+                    Text("$\(viewModel.subscriptions.map({$0.price}).reduce(0, +), specifier: "%.2f") / Month")
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(Color.primary)
                 }
@@ -133,12 +128,14 @@ struct SubscriptionsSection: View {
                 
         }) {
             
-            SubscriptionView(store: store)
+            SubscriptionView(viewModel: viewModel)
         }
         .listRowInsets(EdgeInsets())
     }
 }
 
+//MARK: - ChartView Representable
+//Needed to show custom UIView
 struct ChartViewRepresentable: UIViewRepresentable {
     typealias UIViewType = ChartView
     

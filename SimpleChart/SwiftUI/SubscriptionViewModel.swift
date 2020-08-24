@@ -19,6 +19,11 @@ struct Item: Identifiable {
 class SubscriptionViewModel: ObservableObject {
     @Published var subscriptions: [Item] = subscriptionData
     
+    func append() {
+        print("Appending item")
+        let item = Item(title: "Simple", price: 10, image: "SimpleLogo")
+        subscriptions.append(item)
+    }    
 }
 
 var subscriptionData = [

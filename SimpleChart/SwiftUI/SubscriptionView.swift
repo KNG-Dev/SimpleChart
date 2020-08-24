@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct SubscriptionView: View {
-    @ObservedObject var store = SubscriptionViewModel()
+    @ObservedObject var viewModel = SubscriptionViewModel()
     
     var body: some View {
-        ForEach(store.subscriptions) { item in
+        ForEach(viewModel.subscriptions) { item in
             HStack {
                 Image(item.image)
                     .resizable()
@@ -36,7 +36,7 @@ struct SubscriptionView: View {
         }
             
         .onDelete(perform: { index in
-            self.store.subscriptions.remove(at: index.first!)
+            self.viewModel.subscriptions.remove(at: index.first!)
             
         })
     }

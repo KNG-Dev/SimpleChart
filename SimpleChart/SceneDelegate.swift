@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         let contentView = BudgetView()
         
+        //Uncomment below to use Swift5.0 Code
 //        let navigationController = UINavigationController(rootViewController: contentView)
 
         // Use a UIHostingController as window root view controller.
