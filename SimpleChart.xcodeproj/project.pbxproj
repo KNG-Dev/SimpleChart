@@ -51,7 +51,6 @@
 		34631F5C24EED72200EC0620 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		34631F6324EEF08100EC0620 /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		348D877724F0749D008F4473 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
-		348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleChart copy-Info.plist"; path = "/Users/kennyho/Development/SimpleChart/SimpleChart copy-Info.plist"; sourceTree = "<absolute>"; };
 		34962DCA24F36256008C4558 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		34962DCC24F36401008C4558 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +120,6 @@
 			children = (
 				34631F3324EDC69D00EC0620 /* SimpleChart */,
 				34631F3224EDC69D00EC0620 /* Products */,
-				348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

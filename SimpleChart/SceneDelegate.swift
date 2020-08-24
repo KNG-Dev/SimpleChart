@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //Uncomment below to use Swift5.0 Code
 //        let navigationController = UINavigationController(rootViewController: contentView)
+//        let contentView = ViewController()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

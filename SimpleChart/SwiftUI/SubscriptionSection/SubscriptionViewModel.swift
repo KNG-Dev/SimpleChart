@@ -21,7 +21,7 @@ class SubscriptionViewModel: ObservableObject {
     
     func append() {
         print("Appending item")
-        let item = Item(title: "Simple", price: 10, image: "SimpleLogo")
+        let item = Item(title: "Simple Finance", price: 10, image: "SimpleLogo")
         subscriptions.append(item)
     }    
 }
