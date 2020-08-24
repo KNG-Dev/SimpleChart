@@ -28,8 +28,9 @@ struct MenuView: View {
             MenuAccountSection()
             
             Rectangle()
-                .foregroundColor(Color(self.dark ? .black : .systemGray3))
                 .frame(height: 4)
+                .foregroundColor(Color(self.dark ? .black : .systemGray3))
+                
                 .listRowInsets(EdgeInsets())
             
             MenuSettingSection()

@@ -12,7 +12,6 @@ let screen = UIScreen.main.bounds
 
 struct BudgetView: View {
     var viewModel = SubscriptionViewModel()
-    @State var showPresent = false
     @State var showMenu = false
     
     init() {
@@ -23,48 +22,10 @@ struct BudgetView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             NavigationView {
-                List {
-                    VStack {
-                        HStack {
-                            Text("Overview")
-                                .foregroundColor(Color("TextColor1"))
-                            Spacer()
-                            Text("•••")
-                                .foregroundColor(Color(.lightGray))
-                        }
-                        .padding()
-                        
-                        ChartViewRepresentable()
-                            .frame(width: screen.width, height: 300)
-                        
-                    }
-                    .background(Color("Background"))
-                    .listRowInsets(EdgeInsets())
-                    
-                    SubscriptionsSection(viewModel: viewModel)
-                        .background(Color("Background"))
-                }
-                    
-                .navigationBarTitle("Budget", displayMode: .inline)
-                .navigationBarItems(leading:
-                    Button(action: {self.showMenu.toggle()}) {
-                        
-                        Image(systemName: "line.horizontal.3")
-                            .resizable()
-                            .frame(width: 16, height: 12)
-                        
-                    }, trailing:
-                    
-                    Button(action: {
-                        self.viewModel.append()
-                        
-                    }) {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: 14, height: 14)
-                })
+                BudgetListView(viewModel: viewModel, showMenu: $showMenu)
             }
             
+            //This is the background when MenuView is present
             Color(.black).opacity(0.3)
                 .edgesIgnoringSafeArea(.all)
                 .opacity(self.showMenu ? 1 : 0)
@@ -94,7 +55,7 @@ struct BudgetView: View {
 struct BudgetView_Previews: PreviewProvider {
     static var previews: some View {
         BudgetView()
-            .environment(\.colorScheme, .dark)
+//            .environment(\.colorScheme, .dark)
     }
 }
 
@@ -148,4 +109,8 @@ struct ChartViewRepresentable: UIViewRepresentable {
         
     }
 }
+
+
+
+
 

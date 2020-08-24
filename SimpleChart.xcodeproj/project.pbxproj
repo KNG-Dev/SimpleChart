@@ -27,6 +27,7 @@
 		348D877824F0749D008F4473 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D877724F0749D008F4473 /* BudgetView.swift */; };
 		348D879524F18B81008F4473 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631F5624EE206400EC0620 /* Subscription.swift */; };
 		34962DCB24F36256008C4558 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34962DCA24F36256008C4558 /* Menu.swift */; };
+		34962DCD24F36401008C4558 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34962DCC24F36401008C4558 /* BudgetListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		348D877724F0749D008F4473 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		348D879324F18B21008F4473 /* SimpleChart copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleChart copy-Info.plist"; path = "/Users/kennyho/Development/SimpleChart/SimpleChart copy-Info.plist"; sourceTree = "<absolute>"; };
 		34962DCA24F36256008C4558 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		34962DCC24F36401008C4558 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +68,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34291B3424F1E44800FF9BF2 /* SwiftUI */ = {
+		3401FD1024F3690700FF4DE4 /* SubscriptionSection */ = {
+			isa = PBXGroup;
+			children = (
+				34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */,
+				34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */,
+			);
+			path = SubscriptionSection;
+			sourceTree = "<group>";
+		};
+		3401FD1124F3691600FF4DE4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				34291B3924F2E54200FF9BF2 /* MenuView.swift */,
+				34962DCA24F36256008C4558 /* Menu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		3401FD1224F3692400FF4DE4 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
 				348D877724F0749D008F4473 /* BudgetView.swift */,
-				34291B3924F2E54200FF9BF2 /* MenuView.swift */,
-				34962DCA24F36256008C4558 /* Menu.swift */,
-				34291B3724F2E00F00FF9BF2 /* SubscriptionView.swift */,
-				34291B3224F1DA6000FF9BF2 /* SubscriptionViewModel.swift */,
+				34962DCC24F36401008C4558 /* BudgetListView.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		34291B3424F1E44800FF9BF2 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3401FD1224F3692400FF4DE4 /* Budget */,
+				3401FD1124F3691600FF4DE4 /* Menu */,
+				3401FD1024F3690700FF4DE4 /* SubscriptionSection */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34631F4B24EDF95F00EC0620 /* Extensions.swift in Sources */,
+				34962DCD24F36401008C4558 /* BudgetListView.swift in Sources */,
 				34631F3524EDC69D00EC0620 /* AppDelegate.swift in Sources */,
 				34631F3724EDC69D00EC0620 /* SceneDelegate.swift in Sources */,
 				34631F5924EED0D500EC0620 /* AddSubscriptionController.swift in Sources */,

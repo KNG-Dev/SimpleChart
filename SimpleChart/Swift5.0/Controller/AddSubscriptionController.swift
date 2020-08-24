@@ -17,8 +17,8 @@ class AddSubscriptionController: UITableViewController, UITextFieldDelegate {
     let cellId = "cellId"
     
     @IBOutlet weak var subscriptionTextField: UITextField!
-    
     @IBOutlet weak var subscriptionPriceTextField: UITextField!
+    
     weak var delegate: AddSubscriptionControllerDelegate?
     
     override func viewDidLoad() {
