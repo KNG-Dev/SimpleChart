@@ -23,17 +23,15 @@ struct MenuView: View {
                         .foregroundColor(Color.blue)
                 }
             }
+                
+            .listRowBackground(Color("SlideMenuColor"))
             .frame(height: 50)
             
+            CustomDividerLineView(dark: $dark)
             MenuAccountSection()
-            
-            Rectangle()
-                .frame(height: 4)
-                .foregroundColor(Color(self.dark ? .black : .systemGray3))
-                
-                .listRowInsets(EdgeInsets())
-            
+            CustomDividerLineView(dark: $dark)
             MenuSettingSection()
+            
         }.environment(\.defaultMinListRowHeight, 1)
           
         .onAppear(perform: {
@@ -43,7 +41,7 @@ struct MenuView: View {
         })
     }
     
-    func toggleDarkMode() {
+    fileprivate func toggleDarkMode() {
         dark.toggle()
         UIApplication.shared.windows.first?.rootViewController?.view.overrideUserInterfaceStyle = self.dark ? .dark : .light
     }
@@ -52,7 +50,7 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
-//        .environment(\.colorScheme, .dark)
+        .environment(\.colorScheme, .dark)
     }
 }
 
@@ -78,7 +76,18 @@ struct MenuSettingSection: View {
             }
             .frame(height: 50)
             
-            //Sets the backgroundColor
+            //Sets the backgroundColor for section
         }.listRowBackground(Color("SlideMenuColor"))
+    }
+}
+
+struct CustomDividerLineView: View {
+    @Binding var dark: Bool
+    
+    var body: some View {
+        Rectangle()
+            .frame(height: 4)
+            .foregroundColor(Color(dark ? .black : .systemGray3))
+            .listRowInsets(EdgeInsets())
     }
 }
